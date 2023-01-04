@@ -1,0 +1,39 @@
+.tps-display-desktop {
+  display: block;
+}
+
+.tps-display-tablet {
+  display: none;
+}
+
+.tps-display-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .tps-display-desktop {
+    display: none;
+  }
+  
+  .tps-display-tablet {
+    display: block;
+  }
+  
+  .tps-display-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tps-display-desktop {
+    display: none;
+  }
+  
+  .tps-display-tablet {
+    display: none;
+  }
+  
+  .tps-display-mobile {
+    display: block;
+  }
+}

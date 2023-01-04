@@ -1,0 +1,49 @@
+.refinance__card-title .elementor-widget-container .elementor-heading-title {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refinance__card-box .elementor-image-box-title {
+  min-height: 0px;
+}
+
+.refinance__card-box .elementor-image-box-img img {
+  margin: auto;
+}
+
+@media (max-width: 1199px) {
+  .refinance__card-box .elementor-widget-container {
+    margin-top: 60px!important;
+  }
+
+  .refinance__card-box .elementor-image-box-title {
+    min-height: 130px;
+  }
+}
+
+@media (max-width: 900px) {
+  .refinance__card-box .elementor-widget-container {
+    margin-top: 30px!important;
+  }
+
+  .refinance__card-title .elementor-widget-container .elementor-heading-title {
+    min-height: 0px;
+  } 
+
+  .refinance__card-box .elementor-image-box-title {
+    min-height: 0px;
+  }
+
+  .refinance__card-button .elementor-widget-container {
+    padding-top: 0px!important;
+  }
+}
+
+@media (max-width: 600px) {
+  .refinance__card-button .apply-now-button-container a {
+    width: 70%;
+    font-weight: 400!important;
+  }
+}

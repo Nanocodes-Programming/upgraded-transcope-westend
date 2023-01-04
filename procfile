@@ -1,0 +1,1 @@
+web: gunicorn Transcopre.wsgi --log-file -
