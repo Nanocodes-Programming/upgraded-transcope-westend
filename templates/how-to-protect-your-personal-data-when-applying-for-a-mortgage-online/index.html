@@ -231,22 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="ms-page-loading-background"></div>
   <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </div>
-	<div id="top-header" class="bg-dark-purple hidden">
-		<div class="container">
-			<div class="py-15px h-60 lg:h-70 flex justify-center relative">
-				<div class="th-left flex-1 flex justify-start lg:justify-center items-center pr-64px">
-					<img src="{% static 'wp-content/themes/ms-theme/assets/images/logo-consumer.svg' %}" alt="Consumer Direct Logo" class="h-25 lg:h-full" >
-					<p class="ml-10px lg:ml-20px text-white text-12 sm:text-14 lg:text-18 font-sharp-unity font-extrabold">is now Transcope.</p>
-				</div>
-				<div class="absolute right-0 top-1/2 th-right flex justify-end items-center" style="transform: translateY(-50%)">
-					<a href="#ms-learn-modal" class="underline text-white text-12 sm:text-14 lg:text-18 font-sf-pro mr-15px lg:mr-30px" style="text-underline-offset: 2px;">Learn</a>
-					<button id="close-top-header">
-						<img src="{% static 'wp-content/themes/ms-theme/assets/images/close-top-header.svg' %}" alt="Close top Header" class="h-12 lg:h-24">
-					</button>
-				</div>
-			</div>
-		</div>
-	</div>
+
 
   <header id="masthead" class="site-header sticky rounded top-0 w-full z-100 top-0" role="banner">
 
@@ -388,7 +373,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                                                  
                                             <li class="separator-menu"></li>
                     <li class="menu-tab-single-right pl-10px menu-tab-phone">
-                                                                                <a class="text-dark-purple text-tab-base" href="tel:8882465906">(888) 246-5906</a>
+                                                                                <!---->
                     </li>
                 </ul>
                 <style id="elementor-post-1057">.elementor-1057 .elementor-element.elementor-element-458a0e58 .quicklyApplyBtn{font-family:"Arial", Sans-serif;font-size:14px;font-weight:400;line-height:25px;fill:#120638;color:#120638;background-color:#0D285500;border-radius:10px 10px 10px 10px;}.elementor-1057 .elementor-element.elementor-element-458a0e58 .quickly-apply-button-container{text-align:center;}.elementor-1057 .elementor-element.elementor-element-458a0e58 .quicklyApplyBtn:hover{background-color:#1C4A9800;}.elementor-1057 .elementor-element.elementor-element-458a0e58 .quicklyApplyBtn:active{background-color:#1988DE00;}@media(max-width:1024px){.elementor-1057 .elementor-element.elementor-element-458a0e58 .quicklyApplyBtn{font-size:14px;line-height:12px;padding:8px 10px 8px 10px;}.elementor-1057 .elementor-element.elementor-element-458a0e58 .quickly-apply-button-container{text-align:left;}}@media(max-width:767px){.elementor-1057 .elementor-element.elementor-element-458a0e58 .quicklyApplyBtn{font-size:12px;padding:8px 10px 8px 10px;}.elementor-1057 .elementor-element.elementor-element-458a0e58 .quickly-apply-button-container{text-align:left;}}</style>		<div data-elementor-type="section" data-elementor-id="1057" class="elementor elementor-1057">
@@ -687,12 +672,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-50e49acf rg-download-guide-img elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-id="50e49acf" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-															<img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/download-guide.svg' %}" title="" alt="" />															</div>
+															<img decoding="async" src="{% static 'images/book-cover.jpg' %}" title="" alt="" />															</div>
 				</div>
 				<div class="elementor-element elementor-element-79467a83 rg-download-our-guide elementor-widget elementor-widget-button" data-id="79467a83" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+			<a href="{% static 'book.pdf' %}" class="elementor-button-link elementor-button elementor-size-sm" role="button" id="btn-download-ourguide" download="transcopefinancing-free-gift">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">Download Free Guide</span>
 		</span>
@@ -706,7 +691,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-61e501 rg-download-guide-img elementor-widget elementor-widget-image" data-id="61e501" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-															<img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/download-guide.svg' %}" title="" alt="" />															</div>
+															<img decoding="async" src="{% static 'images/book-cover.jpg' %}" title="" alt="" />															</div>
 				</div>
 					</div>
 		</div>
@@ -1257,7 +1242,7 @@ gform.initializeOnLoaded( function() {gformInitSpinner( 3, 'static/wp-content/pl
 
     <div class="copy-right-wrap">
       <div class="copy-right">
-        <span class='arr copy-right-text'>© 2022 Transcope LLC., All Rights Reserved.  1735 S. Congress Ave, STE 190, Delray Beach, FL 33455</span><span class='nmls'> |  NMLS# 2389303</span>        </div>
+        <span class='arr copy-right-text'>© 2022 Transcope LLC., All Rights Reserved.  1 Vanderbilt Ave, New york, NY 10017, United States</span><span class='nmls'> |  NMLS# 2389303</span>        </div>
       <div class="lender">
         <ul class="flex">
           <li class="pl-20px">
@@ -1418,7 +1403,235 @@ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', 
 </script>
 <script type="text/javascript">
 gform.initializeOnLoaded( function() { jQuery(document).trigger('gform_post_render', [1402, 1]) } );
-</script>
+</script>   <section class="blog-featured-articles carousel-article blog-show-section">
+  <h2 class="article-mini-title"><span class="text-dark-purple">Research related articles.</span></h2>
+  <h3 id="carousel-title" class="h1-title text-center text-xl lg:text-5xl md:text-4xl article-title our-from-blog-title"></h3>
+  <div class="ms-swiper-container-wrap swiper-container-wrap eael-logo-carousel-wrap eael-post-grid-container eael-post-carousel-wrap eael-post-carousel-style-default eael-full-screen" id="eael-post-grid-carousel-article">
+    <div class="swiper-container eael-post-carousel eael-post-grid swiper-container-carousel-article eael-post-appender-carousel-article" data-pagination=".swiper-pagination-carousel-article" data-arrow-next=".swiper-button-next-carousel-article" data-arrow-prev=".swiper-button-prev-carousel-article" data-items="3" data-items-tablet="2" data-items-mobile="1" data-margin="10" data-effect="slide" data-speed="1000" data-autoplay="0" data-loop="1" data-arrows="1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{%url 'extra-mortgage-payment' %}">
+      <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><img decoding="async" src="{% static 'wp-content/uploads/money-on-scale-min.png' %}" alt="money on scale">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="Why Should You Make an Extra Mortgage Payment?">Why Should You Make an Extra Mortgage Payment?</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{% url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Jan 26, 2022">Jan 26, 2022</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">Mortgage Basics Some people choose a 30-year mortgage for the lower payment, yet hate the idea of paying the loan...</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{% url 'extra-mortgage-payment' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+<div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{% url 'first-time-home' %}">
+    <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><div class="ms-entry-tagname">Popular</div><img decoding="async" src="{% static 'wp-content/uploads/ownership-min-1024x714-1.jpg' %}" alt="Wood block letters spelling Ownership">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="Four Common Mistakes First Time Homebuyers Make, and How to Avoid Them">Four Common Mistakes First Time Homebuyers Make, and How to Avoid Them</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{%url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Jan 18, 2022">Jan 18, 2022</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">Ah, the joys of buying a home. Being outbid by another buyer, the unexpected surprises, and of course, everyone&#8217;s sudden...</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{% url 'first-time-home' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+<div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{%url 'debt-to-income' %}">
+    <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><div class="ms-entry-tagname">Mortgage Basics</div><img decoding="async" src="{% static 'wp-content/uploads/percentage-min.jpg' %}" alt="Imaginary house with percentage sign inside">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="How Debt-to-Income Impacts Buying a House">How Debt-to-Income Impacts Buying a House</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{%url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Jan 6, 2022">Jan 6, 2022</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">Home Buying Got debt, but you’re looking to buy a house? Fortunately, there’s no rule that says you must be...</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{% url 'debt-to-income' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+<div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{% url 'personal-data' %}">
+    <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><img decoding="async" src="{% static 'wp-content/uploads/on-computer-laughing-min-1024x683-1.jpg' %}" alt="Couple working together at desk">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="How to Protect Your Personal Data When Applying for a Mortgage Online">How to Protect Your Personal Data When Applying for a Mortgage Online</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{% url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Dec 8, 2021">Dec 8, 2021</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">The internet has forever changed the way we shop, communicate, and even the way we work. But while most of...</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{% url 'personal-data' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+<div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{% url 'increase-your-odds' %}">
+    <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><img decoding="async" src="{% static 'wp-content/uploads/Couple-1024x279-1.jpg' %}" alt="Couple smiling at each other">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="Increase Your Odds of Getting a Home Loan as a First-Time Homebuyer">Increase Your Odds of Getting a Home Loan as a First-Time Homebuyer</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{%url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Nov 4, 2021">Nov 4, 2021</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">Of all the things in life that can be overwhelming, being a first-time home buyer tops the list. And if...</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{% url 'increase-your-odds' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+<div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{%url 'inexpensive-ways' %}">
+    <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><img decoding="async" src="{% static 'wp-content/uploads/laughing-1024x279-1.jpg' %}" alt="Couple laughing together">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="Inexpensive Ways to Spruce Up Your House">Inexpensive Ways to Spruce Up Your House</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{%url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Oct 7, 2021">Oct 7, 2021</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">If you feel that your kitchen and bathrooms are a throwback to the 90s, or that the only thing modern...</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{%url 'inexpensive-ways' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+<div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{%url 'low-mortgage-loans' %}">
+    <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><div class="ms-entry-tagname">Popular</div><img decoding="async" src="{% static 'wp-content/uploads/moving-1024x279-1.jpg' %}" alt="Couple holding moving boxes">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="Low Mortgage Rates Can Make Your Dream More Affordable">Low Mortgage Rates Can Make Your Dream More Affordable</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{%url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Sep 3, 2021">Sep 3, 2021</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">It&#8217;s totally normal to be indecisive about buying a house. This isn&#8217;t a pair of shoes or a splurge— and...</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{%url 'low-mortgage-loans' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+<div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{%url 'mortgage-rates' %}">
+    <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><img decoding="async" src="{% static 'wp-content/uploads/loan-officer-min.jpg' %}" alt="Lady meeting with loan officer at desk">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="Mortgage Rates are Dropping: Should You Refinance a Home?">Mortgage Rates are Dropping: Should You Refinance a Home?</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{%url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Aug 19, 2021">Aug 19, 2021</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">Home mortgage rates remain low—but eventually, all good things come to an end—so they’re not expected to stay low forever....</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{%url 'mortgage-rates' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+<div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{%url 'programs-and-loans' %}">
+    <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><img decoding="async" src="{% static 'wp-content/uploads/handshake-min-1024x279-1.jpg' %}" alt="Couple meeting with loan officer at desk">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="Programs and Loans to Help You Buy a House">Programs and Loans to Help You Buy a House</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{%url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Jul 13, 2021">Jul 13, 2021</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">Thinking about buying a home? Don’t have enough cash to make it happen? We know it’s discouraging. But don’t kick...</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{%url 'programs-and-loans' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+<div class="swiper-slide fb-swiper-slide">
+<article class="eael-grid-post eael-post-grid-column">
+    <a class="eael-grid-post-holder-link" href="{%url 'mortgage-scams' %}">
+    <div class="eael-grid-post-holder shadow-md">
+        <div class="eael-grid-post-holder-inner">
+            <div class="eael-entry-media fb-entry-medianone"><div class="fb-entry-thumbnail"><img decoding="async" src="{% static 'wp-content/uploads/house-keys.jpg'  %}" alt="Keys to a house">
+                
+                </div></div><div class="fb-entry-wrapper"><header class="eael-entry-header"><p class="fb-entry-title"><span title="How to Protect Yourself From Mortgage Scams">How to Protect Yourself From Mortgage Scams</span></p></header></div><div class="eael-entry-content"><div class="eael-address"><a href="{%url 'author' %}" title="Posts by Tim Borquez" rel="author">Tim Borquez</a></div><div class="eael-posted_on-time_read"><div><div class="eael-posted-on"><time datetime="Jun 8, 2021">Jun 8, 2021</time></div></div><div><div class="eael-time-read">
+                    <div class="eael-icon-time">
+                        <img decoding="async" src="{% static 'wp-content/themes/ms-theme/assets/images/clock.svg' %}">
+                    </div>
+                    <span>10  min read</span>
+                </div></div>
+                </div><div class="eael-description">So, you’ve decided to take the plunge and become a homebuyer. You’re probably imagining your first gathering with friends in...</div>
+                </div><div class="fb-entry-footer"><div class="fb-entry-meta"></div></div><a id="btn-read-featured-article" href="{%url 'mortgage-scams' %}" class="eael-btn-read blog-read-link">Read</a>            </div>
+    </div>
+    </a>
+</article>
+</div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+                <!-- Add Arrows -->
+  <div class="swiper-button-next fb-swiper-button-next swiper-button-next-carousel-article">
+  </div>
+  <div class="swiper-button-prev fb-swiper-button-prev swiper-button-prev-carousel-article">
+  </div>
+  </div>
+  <div class="text-center text-lg text-active font-bold lg:my-12 mb-7.5 mt-5">
+    <a href="http://localhost/realgenius/blog" class="elementor-button-link flex justify-center items-center hidden" role="button">
+      <p class="mr-3 view-more-text">View More</p>
+      <svg fill="#1C4A98" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 14.929">
+        <defs></defs>
+        <g transform="translate(-476.859 -2187.177)">
+          <path style="color: #1C4A98" d="M4.679-4.778a.82.82,0,0,0,0-1.16l-6.644-6.644a.821.821,0,0,0-1.16,0l-.775.775a.82.82,0,0,0,0,1.159l5.266,5.29L-3.9-.068a.82.82,0,0,0,0,1.159l.775.775a.821.821,0,0,0,1.16,0Z" transform="translate(481 2200)" />
+          <path style="opacity: .6;" d="M4.679-4.778a.82.82,0,0,0,0-1.16l-6.644-6.644a.821.821,0,0,0-1.16,0l-.775.775a.82.82,0,0,0,0,1.159l5.266,5.29L-3.9-.068a.82.82,0,0,0,0,1.159l.775.775a.821.821,0,0,0,1.16,0Z" transform="translate(491.94 2200)" />
+        </g>
+      </svg>
+    </a>
+  </div>
+  <div class="fb_carousel_article__wrapper-applynow text-center hidden">
+    <a role="button" href="https://rate.realgenius.com/" target="_self" class="elementor-button-link fb_carousel_article__applynow hover:bg-primary-400 active:bg-primary-600 rounded-md">
+      Apply Now        </a>
+  </div>
+</section>
+    </div>
+    </div>
+      </div>
+</div>
+          </div>
+</section>
+        </
 <script type="text/javascript">
 gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 2) {jQuery('#input_2_6').mask('(999) 999-9999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
 </script>

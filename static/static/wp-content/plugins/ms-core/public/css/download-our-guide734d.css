@@ -1,0 +1,15 @@
+.button-down-our a {
+    border-radius: 6px;
+    padding : 20px 40px 20px 40px;
+    font-family: "Inter", Sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--color-white);
+    width: 100%;
+    background: var(--color-blue-purple-gradient-138);
+}
+
+.btn-download-our{
+    display: inline-block;
+}

@@ -28,6 +28,8 @@ urlpatterns = [
 
     # URLS in MAIN.HTML  TEMPLATE
     path("apply/", views.Apply, name='apply'),
+    path("property-details/", views.Apply2, name='apply2'),
+    path("final-step/", views.Apply3, name='apply3'),
     path("admin-ajax/", views.AdminAjax, name='admin-ajax'),
     path("ws-json/", views.WsJson, name='ws-json'),
     path("refinance/", views.Refinance, name='refinance'),
