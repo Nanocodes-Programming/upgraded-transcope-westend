@@ -11,37 +11,58 @@ def index(request):
 
 # Main.Html Views
 def Apply(request):
-    if request.method == 'POST':
-        form = ApplicationForm(request.POST)
+    print("outside post method -1 \n")
+    print("outside post method -2 \n")
+    if request.method == "POST":
+        print("inside post method \n")
+        print("inside post method \n")
+        first_name = request.POST.get("first_name")
+        print(first_name)
+        last_name = request.POST.get("last_name")
+        print(last_name)
+        address = request.POST.get("address")
+        city = request.POST.get("city")
+        zip_code = request.POST.get("zip_code")
+        state = request.POST.get('state')
+        email = request.POST.get("email")
+        phone_number = request.POST.get("phone_number")
+        print(first_name + '\n')
+        credit_score = request.POST.get("credit_score")
+        bankruptcy = request.POST.get("bankruptcy")
+        monthly_income = request.POST.get("address")
+        total_assets = request.POST.get("total_assets")
+        marriage_status = request.POST.get("marriage_status")
+        child_support = request.POST.get('child_support')
+        email = request.POST.get("email")
+        print(email)
+        phone_number = request.POST.get("phone_number")
+        home_type = request.POST.get("home_type")
+        refinance_type = request.POST.get("refinance_type")
+        loan_type = request.POST.get("loan_type")
+        refinance_goal = request.POST.get("refinance_goal")
+        estimated_value = request.POST.get("estimated_value")
+        estimated_amount = request.POST.get('estimated_amount')
+        # calling the database through django orm
+        Application.objects.create(first_name=first_name, last_name=last_name,
+                                           address = address, city=city, zip_code=zip_code, state=state,
+                                           phone_number=phone_number, credit_score=credit_score, bankruptcy=bankruptcy,
+                                           monthly_income = monthly_income, total_assets=total_assets, marriage_status=marriage_status,
+                                           child_support=child_support, email=email, home_type=home_type, refinance_type=refinance_type,
+                                           loan_type = loan_type, refinance_goal=refinance_goal,
+                                           estimated_value=estimated_value, estimated_amount=estimated_amount
+                                           )
 
-        if form.is_valid():
 
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            email = form.cleaned_data['email']
-            address = form.cleaned_data['address']
-            phone_number = form.cleaned_data['phone_number']
+    return render(request, 'apply.html', {})
 
-            html = render_to_string('applicationform.html', {
-            'first_name': first_name,
-            'last_name': last_name,
-            'email': email,
-            'address': address,
-            'phone_number': phone_number,
 
-            })
 
-            send_mail('The Application form subject',
-                      'Successfully Applied',
-                      'benjaminparish6@gmail.com',
-                      ['benjaminparish6@gmail.com'],
-                      html_message=html
+def Apply2(request):
+    return render(request, 'apply2.html', {})
 
-                      )
-            return redirect('home')
-    else:
-        form = ApplicationForm()
-    return render(request, 'apply.html', {'form': form})
+
+def Apply3(request):
+    return render(request, 'apply3.html', {})
 
 
 
@@ -49,31 +70,31 @@ def AdminAjax(request):
     return render(request, 'wp-admin/admin-ajax.html', {})
 
 def WsJson(request):
-    return render(request, '', {}) 
+    return render(request, '', {})
 
 def Refinance(request):
-    return render(request, 'refinance/index.html', {}) 
+    return render(request, 'refinance/index.html', {})
 
 def Purchase(request):
-    return render(request, 'purchase/index.html', {}) 
+    return render(request, 'purchase/index.html', {})
 
 def Conventional(request):
-    return render(request, 'options/conventional.html', {}) 
+    return render(request, 'options/conventional.html', {})
 
 def UsaVA(request):
-    return render(request, 'options/va.html', {}) 
+    return render(request, 'options/va.html', {})
 
 def UsaFha(request):
-    return render(request, 'options/fha.html', {}) 
+    return render(request, 'options/fha.html', {})
 
 def Jumbo(request):
-    return render(request, 'options/jumbo.html', {}) 
+    return render(request, 'options/jumbo.html', {})
 
 def UsaUsda(request):
     return render(request, 'options/usda.html', {})
 
 def CashOut(request):
-    return render(request, 'options/cash.html', {}) 
+    return render(request, 'options/cash.html', {})
 
 def Personal(request):
     return render(request, 'options/personal.html', {})
@@ -82,7 +103,7 @@ def BusinessLoan(request):
     return render(request, 'options/business.html', {})
 
 def Calc(request):
-    return render(request, 'calculators-selection/index.html', {}) 
+    return render(request, 'calculators-selection/index.html', {})
 
 def RArticles(request):
     return render(request, 'articles/index.html', {})

@@ -1,0 +1,26 @@
+.early-payoff__calculator .error-message {
+  font-size: 12px;
+}
+
+.early-payoff__calculator .calculator-section .container .section-container .buttons .early-payoff-button {
+  border: 2px solid #303E55;
+}
+
+.early-payoff__calculator .calculator-section .container .section-container .calculator-result .from-now {
+  color: #303E55;
+}
+
+.early-payoff__calculator .calculator-section .section-container-wrap .buttons .early-payoff-button.active .early-payoff-icon::after {
+  height: 12px;
+  width: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .early-payoff__calculator .calculator-section .container .section-container-wrap .section-container .calculator-result .principal-and-interest {
+    margin-top: 33px;
+  }
+
+  .early-payoff__calculator .calculator-section .container .section-container-wrap .section-container .calculator-result .saving-loans {
+    margin-top: 33px;
+  }
+}

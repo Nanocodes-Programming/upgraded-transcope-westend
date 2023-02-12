@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/apple-touch-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/favicon-16x16.png' %}">
+	<link rel="mask-icon" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/safari-pinned-tab.svg' %}" color="#0468f7">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title> Application form | Final Steps</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href='/static/wp-includes/css/apply.css'  type='text/css' />
+  </head>
+  <body>
+    <div class='main'>
+    <div class="container">
+      <div class="title" style="font-size: 2.8rem;">Application form | Final Step </div>
+      <form action="/" id='form'>
+        {% csrf_token %}
+        <br>
+        <br>
+
+        <div class="user__details">
+          <div class="input__box">
+            <span class="details"> Estimated Credit Score:</span>
+            <select name="credit_score" class="medium gfield_select" aria-describedby="gfield_description_8_67" aria-required="true" aria-invalid="false" required data-gtm-form-interact-field-id="0">
+                <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                <option value="Excellent (720 or more)">Excellent (720 or more)</option>
+                <option value="Good (680 - 719)">Good (680 - 719)</option>
+                <option value="Average (620 - 679)">Average (620 - 679)</option>
+                <option value="Fair (580 - 619)">Fair (580 - 619)</option>
+                <option value="Poor (less than 580)">Poor (less than 580)</option>
+                <option value="Not Sure">Not Sure</option>
+            </select>
+            {% comment %} <input type="text" name='credit_score' title="E.g: Primary Home, Secondary Home, Rental Property" placeholder="E.g: Primary, Secondary, Rental home" required /> {% endcomment %}
+          </div>
+
+
+          <div class="input__box">
+            <span class="details">Have you had a bankruptcy or foreclosure in the last 7 years?</span>
+            <select name="bankruptcy" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+          <div class="input__box">
+            <span class="details">Monthly Gross Income: </span>
+            <input type="text" name='monthly_income' placeholder="E.g $20,000+" title="Monthly Gross income, (Include Before Tax Values - Salary, Overtime, Commissions, Etc)" required />
+          </div>
+
+          <div class="input__box">
+            <span class="details"> Total Assets: </span>
+            <input type="text" title='(Checking, Savings, & Liquidable Retirement Accounts)' placeholder="$100,000+ " required />
+          </div>
+
+          <div class="input__box">
+            <span class="details"> Are you married?</span>
+            <select name="marriage_status" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>          </div>
+
+          <div class="input__box">
+            <span class="details"> Do you pay alimony and/or child support? </span>
+            <select name="child_support" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+         </div><br>
+
+         <div class='input_box'>
+            <span class='details'> By submitting this form you agree to a loan officer contacting you regarding the particular inquiry/application </span>
+            <input class="gfield-choice-input" name="input_85.1" type="checkbox" value="By submitting this form you agree to a loan officer contacting you regarding the particular inquiry/application." checked="checked" id="choice_8_85_1">
+            </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+   
+    </div
+  
+  </body>
+  <script>
+    document.getElementById("form").addEventListener("submit", function(event){
+        event.preventDefault();
+        window.location.href = "/";
+        alert("Form Submitted Successfully!");
+      });
+</script>
+</html>
+

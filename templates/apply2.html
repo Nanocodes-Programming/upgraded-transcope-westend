@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/apple-touch-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/favicon-16x16.png' %}">
+	<link rel="mask-icon" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/safari-pinned-tab.svg' %}" color="#0468f7">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title> Application Form | Property Details</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href='/static/wp-includes/css/apply.css'  type='text/css' />
+  </head>
+  <body>
+    <div class='main'>
+    <div class="container">
+      <div class="title" style="font-size: 2.8rem;">Application form | Property Details </div>
+      <form action="{% url "apply3" %}">
+        {% csrf_token %}
+        <br>
+        <br>
+        {% comment %} <div class="details" style="font-size: 2rem;"> Property Details</div> {% endcomment %}
+
+        <div class="user__details">
+          <div class="input__box">
+            <span class="details"> How will this property be used?</span>
+            <select name="home_type" id="input_8_63" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                <option value="Primary Home">Primary Home</option>
+                <option value="Secondary Home">Secondary Home</option>
+                <option value="Rental Property">Rental Property</option>
+            </select>
+        </div>
+
+
+          <div class="input__box">
+            <span class="details">What type of property are you refinancing?</span>
+            <select name="refinance_type" id="input_8_64" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                <option value="Single Family Home">Single Family Home</option>
+                <option value="Condominium">Condominium</option>
+                <option value="Townhome">Townhome</option>
+                <option value="Multi-Family">Multi-Family</option>
+            </select>
+        </div>
+
+          <div class="input__box">
+            <span class="details">What type of Loan do you currently have? </span>
+            <select name="loan_type" id="input_8_62" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                <option value="FHA Loan">FHA Loan</option>
+                <option value="Conventional Loan">Conventional Loan</option>
+                <option value="VA Loan">VA Loan</option>
+                <option value="USDA Loan">USDA Loan</option>
+                <option value="Jumbo Loan">Jumbo Loan</option>
+                <option value="Not sure, Compare Options">Not sure, Compare Options</option>
+            </select>
+        </div>
+
+          <div class="input__box">
+
+          </div>
+          <div class="input__box">
+            <span class="details"> What is the goal for the refinance? </span>
+            <select name="refinance_goal"  class="medium gfield_select" aria-required="true" aria-invalid="false" required >
+                <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                <option value="Reduce Monthly Payment">Reduce Monthly Payment</option>
+                <option value="Shorten Mortgage Term">Shorten Mortgage Term</option>
+                <option value="Cahout Equity">Cahout Equity</option>
+            </select>
+        </div>
+
+          <div class="input__box">
+            <span class="details"> What is the estimated value of the property?</span>
+            <input type="number" title="$100,000 - $1,000,000+" placeholder="$100,000 - $1,000,000+" required />
+          </div>
+
+          <div class="input__box">
+            <span class="details"> What is the estimated amount of the new mortgage requested </span>
+            <input type="number" title="$100,000 - $1,000,000+" placeholder="$100,000 - $1,000,000+" required />
+          </div><br>
+
+        </div>
+        {% comment %}  {% endcomment %}
+        <div class="button">
+          <input type="submit" value="Next" />
+        </div>
+      </form>
+    </div>
+    {% comment %}
+    <main id="main" class="site-main site__form" role="main">
+      <h3>Step 1 personal details details</h3>
+      {%for field in form%}
+      <form action=" " method="POST">
+        {%csrf_token%}
+        <label for="">{{field.label}}</label>
+        {{field}} {%endfor%}
+        <div>
+          <input
+            type="submit"
+            value="submit"
+            style="display: block; cursor: pointer; margin-top: 10px"
+          />
+        </div>
+      </form>
+    </main>
+    {% endcomment %} 
+    </div
+    <script src="" async defer></script>
+  </body>
+</html>
+

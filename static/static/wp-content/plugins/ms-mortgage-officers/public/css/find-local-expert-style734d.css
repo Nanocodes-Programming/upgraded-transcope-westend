@@ -1,0 +1,124 @@
+.show-all-wrapper {
+  position: relative;
+}
+
+.hr-style {
+  border-top: 3px solid var(--color-blue);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 0;
+}
+
+#button_show_all_local_expert {
+  z-index: 9;
+  position: relative;
+  background: var(--color-white)!important;
+  padding: 0 20px;
+  color: var(--color-blue);
+  font-family: var(--font-sharp-unity);
+  font-weight: 900;
+  font-size: var(--font-size-14);
+}
+
+@media (min-width:768px) {
+  .show-all-wrapper {
+    margin-top: 182px;
+  }
+
+  .hr-style {
+    max-width: 542px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #button_show_all_local_expert {
+    font-size: var(--font-size-24);
+  }
+}
+
+@media (min-width: 1280px) {
+  .show-all-wrapper {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 1640px) {
+  .show-all-wrapper {
+    margin-top: 20px;
+  }
+}
+
+.find-local-expert-layer {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+.form-wrapper .search-icon {
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.find-local-expert-layer img{
+  height: 100%;
+  width: 100%;
+}
+
+/* .fb-lo-show-next-loading {
+  background: #D1D5DB !important;
+  cursor: not-allowed!important;
+  color:#303e55!important;
+} */
+
+.find-local-expert-container .hidden {
+  display: none!important;
+}
+
+.find-local-expert-container .common-error-message {
+  bottom: 0px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .find-local-expert-container .error-message {
+    position: inherit;
+  }
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+input[type="text"].ui-autocomplete-loading{
+  background-image: url(../images/loading-ajax-41px.gif);
+  background-repeat: no-repeat;
+  background-position: right center;
+  visibility: visible;
+}

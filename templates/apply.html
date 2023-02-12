@@ -1,20 +1,481 @@
-{%extends 'main.html' %}
 
-{%load static%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/apple-touch-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/favicon-16x16.png' %}">
+	<link rel="mask-icon" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/safari-pinned-tab.svg' %}" color="#0468f7">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{%block content%}
-<main id="main" class="site-main site__form" role="main">
-    <h3>Step 1 personal details details</h3>
-{%for field in form%}
-        <form action=" " method="POST">
-            {%csrf_token%}
-            <label for="">{{field.label}}</label>
-            {{field}}
-{%endfor%}
-            <div>
-                <input type='submit'   value='submit'  style="display: block;cursor: pointer; margin-top:10px;"/> 
-           </div>
+    <title> Application form | Transcope Financing</title>
+    <link rel="stylesheet" href='/static/wp-includes/css/apply.css'  type='text/css' />
+
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+ .mainy__sec {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+    background-color: aliceblue;
+}
+.containeeer {
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000020;
+    border-radius: 8px;
+    {% comment %} background: linear-gradient(135deg, var(--main-blue), var(--main-purple)); {% endcomment %}
+    background-color: white;
+}
+.step {
+    display: none;
+}
+.step.active {
+    display: block;
+}
+.form-group {
+    width: 100%;
+    margin-top: 20px;
+}
+.form-group input,.form-group select {
+    width: 100%;
+    border: 1.5px solid rgba(128, 128, 128, 0.418);
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+button.next-btn, button.previous-btn, button.submit-btn {
+    float: right;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(180, 220, 255);
+    font-family: sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+button.previous-btn {
+    float: left;
+}
+button.submit-btn {
+    background-color: aquamarine;
+}
+.flexy{
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+        </style>
+  </head>
+  <body>
+
+    <section class="mainy__sec">
+
+      <div class="containeeer" >
+        <form method="POST" action='' id='form'>
+          {% csrf_token %}
+
+          <div class="step step-1 active">
+            <h2>Application Form</h2>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="firstName"> First Name</label>
+                <input type="text"   name='first_name' >
+              </div>
+              <div class="form-group">
+                <label for="firstName"> last Name</label>
+                <input type="text"  name="last_name">
+              </div>
+            </aside>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="firstName"> current address</label>
+                <input type="text"  name="address">
+              </div>
+              <div class="form-group">
+                <label for="nickName">City</label>
+                <input type="text"  name="city">
+              </div>
+            </aside>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="firstName"> zip/postal code</label>
+                <input type="text"  name="zip_code">
+              </div>
+              <div class="form-group">
+                <label for="nickName"> state/province/region</label>
+                <input type="text"  name="state">
+              </div>
+            </aside>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="firstName"> E-mail</label>
+                <input type="email"  name="email">
+              </div>
+              <div class="form-group">
+                <label for="nickName">Phone  Number</label>
+                <input type="number"  name="City">
+              </div>
+            </aside>
+            <div style="margin-top:1rem;">
+              {% comment %} <label for="gender">male</label>
+              <input type="radio" id="gender" name="a">
+              <label for="gender">female</label>
+              <input type="radio" id="gender" name="female">
+              <label for="gender">prefare not say</label>
+              <input type="radio" id="gender" name="prefare not say"> {% endcomment %}
+            </div>
+            <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <!-- step 2 -->
+          <div class="step step-2 ">
+
+            <h2>Property Details</h2>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="firstName"> how will this property be used?</label>
+                <select name="home_type" id="input_8_63" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                  <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                  <option value="Primary Home">Primary Home</option>
+                  <option value="Secondary Home">Secondary Home</option>
+                  <option value="Rental Property">Rental Property</option>
+              </select>
+              </div>
+              <div class="form-group">
+                <label for="lastName"> what type of property are you
+                  refinancing?</label>
+                  <select name="refinance_type" id="input_8_64" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                    <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                    <option value="Single Family Home">Single Family Home</option>
+                    <option value="Condominium">Condominium</option>
+                    <option value="Townhome">Townhome</option>
+                    <option value="Multi-Family">Multi-Family</option>
+                </select>
+              </div>
+            </aside>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="nickName">what type of loan do you currently have?</label>
+                <select name="loan_type" id="input_8_62" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                  <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                  <option value="FHA Loan">FHA Loan</option>
+                  <option value="Conventional Loan">Conventional Loan</option>
+                  <option value="VA Loan">VA Loan</option>
+                  <option value="USDA Loan">USDA Loan</option>
+                  <option value="Jumbo Loan">Jumbo Loan</option>
+                  <option value="Not sure, Compare Options">Not sure, Compare Options</option>
+              </select>
+              </div>
+              <div class="form-group">
+                <label for="nickName">what is the goal for refinancing?</label>
+                <select name="refinance_goal"  class="medium gfield_select" aria-required="true" aria-invalid="false" required >
+                  <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                  <option value="Reduce Monthly Payment">Reduce Monthly Payment</option>
+                  <option value="Shorten Mortgage Term">Shorten Mortgage Term</option>
+                  <option value="Cahout Equity">Cahout Equity</option>
+              </select>
+              </div>
+            </aside>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="nickName">what is the estimated value of the
+                  property?</label>
+                  <input type="number" name="estimated_value" title="$100,000 - $1,000,000+" placeholder="$100,000 - $1,000,000+" required />
+
+              </div>
+              <div class="form-group">
+                <label for="nickName">what is the estimated amount of the new
+                  mortgage requested?</label>
+                  <input type="number" name="estimated_amount" title="$100,000 - $1,000,000+" placeholder="$100,000 - $1,000,000+" required />
+
+              </div>
+            </aside>
+            <button type="button" class="previous-btn">Prev</button>
+            <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step step-3">
+            <h3>final phase </h3>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="firstName"> Estimated credit score:</label>
+                <select name="credit_score" class="medium gfield_select" aria-describedby="gfield_description_8_67" aria-required="true" aria-invalid="false" required data-gtm-form-interact-field-id="0">
+                  <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                  <option value="Excellent (720 or more)">Excellent (720 or more)</option>
+                  <option value="Good (680 - 719)">Good (680 - 719)</option>
+                  <option value="Average (620 - 679)">Average (620 - 679)</option>
+                  <option value="Fair (580 - 619)">Fair (580 - 619)</option>
+                  <option value="Poor (less than 580)">Poor (less than 580)</option>
+                  <option value="Not Sure">Not Sure</option>
+              </select>
+              </div>
+              <div class="form-group">
+                <label for="lastName"> Have you had bankruptcy or foreclosure in the last 7 years</label>
+                <select name="bankruptcy" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                  <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+              </select>
+              </div>
+            </aside>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="nickName">Monthly gross income:</label>
+                <input type="text" name='monthly_income' placeholder="E.g $20,000+" title="Monthly Gross income, (Include Before Tax Values - Salary, Overtime, Commissions, Etc)" required />
+
+              </div>
+              <div class="form-group">
+                <label for="nickName">Total Assets:</label>
+                <input type="text" name="total_assets" title='(Checking, Savings, & Liquidable Retirement Accounts)' placeholder="$100,000+ " required />
+
+              </div>
+            </aside>
+            <aside class="flexy">
+              <div class="form-group">
+                <label for="nickName">Are you married?</label>
+                <select name="marriage_status" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                  <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+              </select>
+
+              </div>
+              <div class="form-group">
+                <label for="nickName">Do you pay alimony and / or child support</label>
+                <select name="child_support" class="medium gfield_select" aria-required="true" aria-invalid="false" required>
+                <option value="" selected="selected" class="gf_placeholder">Select One</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+              </div>
+            </aside>
+            <p>by submitting this form you agree to a loan officer contacting you regarding the particular inquiry / application  <input type="checkbox" checked="checked"> </p>
+
+            <button type="button" class="previous-btn">Prev</button>
+            <button type="submit" class="submit-btn">Submit</button>
+
+          </div>
         </form>
-    </main>
+      </div>
+    </section>
+    <script>
 
-{%endblock content%}
+        const steps = Array.from(document.querySelectorAll("form .step"));
+        const nextBtn = document.querySelectorAll("form .next-btn");
+        const prevBtn = document.querySelectorAll("form .previous-btn");
+        const form = document.querySelector("form");
+        nextBtn.forEach((button) => {
+            button.addEventListener("click", () => {
+                changeStep("next");
+            });
+        });
+        prevBtn.forEach((button) => {
+            button.addEventListener("click", () => {
+                changeStep("prev");
+            });
+        });
+        form.addEventListener("submit", (e) => {
+            // e.preventDefault();
+            const inputs = [];
+            form.querySelectorAll("input").forEach((input) => {
+                const { name, value } = input;
+                inputs.push({ name, value });
+            });
+            console.log(inputs);
+            form.reset();
+        });
+        function changeStep(btn) {
+            let index = 0;
+            const active = document.querySelector(".active");
+            index = steps.indexOf(active);
+            steps[index].classList.remove("active");
+            if (btn === "next") {
+                index++;
+            }
+            else if (btn === "prev") {
+                index--;
+            }
+            steps[index].classList.add("active");
+
+        }
+
+       document.getElementById("form").addEventListener("submit", function(event){
+          event.preventDefault();
+          window.location.href = "/";
+          alert("Form Submitted Successfully!");
+        });
+        </script>
+  </body>
+</html>
+
+
+
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/apple-touch-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/favicon-16x16.png' %}">
+	<link rel="mask-icon" href="{% static 'wp-content/themes/ms-theme/assets/images/favicon/safari-pinned-tab.svg' %}" color="#0468f7">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title> Application form | Personal Details] </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href='/static/wp-includes/css/apply.css'  type='text/css' />
+  </head>
+  <body>
+    <div class='main'>
+    <div class="container">
+      <div class="title" style="font-size: 2.8rem;">Application form</div>
+      <form action="/final-step" method="POST" id="form">
+        {% csrf_token %}
+        <br>
+        <br>
+        {% comment %} <div class="details" style="font-size: 2rem;"> Property Details</div> {% endcomment %}
+
+        {% comment %} <div class="user__details">
+          <div class="input__box">
+            <span class="details"> First Name</span>
+            <input type="text" name='first_name' title="E.g: Dennis" placeholder="First name" required />
+          </div>
+
+
+          <div class="input__box">
+            <span class="details">Last Name</span>
+            <input type="text" name='last_name' title="E.g Ivnny"  placeholder="Last name" required />
+          </div>
+
+
+
+          <div class="input__box width" >
+            <span class="details"> Current Address</span>
+            <input type="text" name="address" title='Current Address' placeholder="current address...." required />
+            <span>Street Address </span>
+          </div><br>
+
+          <div class="input__box">
+            <span class="details">City </span>
+            <input type="text" name='city' title="city name " placeholder="Idaho, Miami, etc....." required />
+            <span> </span>
+          </div>
+
+          <div class="input__box">
+            <span class="details"> Zip / Postal Code </span>
+            <input type="text" name='zip_code' title=" Zip / Postal Code" placeholder="99043" required />
+            <span></span>
+          </div><br>
+
+          <div class="input__box">
+            <span class="details">State / Province / Region  </span>
+            <input type="text" name='state' title="State / Province / Region" placeholder="Ontario........" required />
+            <span></span>
+          </div>
+          <br>
+          <br/>
+          <br/>
+          <div class="input__box">
+            <span class="details"> Email:</span>
+            <input type="email" placeholder="email@transcopefinancing.com" required />
+            <span>  </span>
+          </div>
+
+          <div class="input__box">
+            <span class="details">Phone Number</span>
+            <input
+              name = "phone_number"
+              type="tel"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="012-345-6789"
+              required
+            />
+          </div>
+
+
+        </div>
+
+        <div class="gender__details">
+          <input type="radio" name="male" id="dot-1" />
+          <input type="radio" name="female" id="dot-2" />
+          <input type="radio" name="prefer not to say" id="dot-3" />
+          <span class="gender__title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span>Male</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span>Female</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span>Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button" >
+          <input type="submit" id="next-button" value="Next" />
+        </div>
+      </form>
+    </div>
+    {% comment %}
+    <main id="main" class="site-main site__form" role="main">
+      <h3>Step 1 personal details details</h3>
+      {%for field in form%}
+      <form action=" " method="POST">
+        {%csrf_token%}
+        <label for="">{{field.label}}</label>
+        {{field}} {%endfor%}
+        <div>
+          <input
+            type="submit"
+            value="submit"
+            style="display: block; cursor: pointer; margin-top: 10px"
+          />
+        </div>
+      </form>
+    </main>
+    {% endcomment %}
+    {% comment %} </div
+    <script src="" async defer></script>
+  </body>
+  <script>
+     document.getElementById("form").addEventListener("submit", function(event){
+          event.preventDefault();
+          window.location.href = "/";
+          alert("Form Submitted Successfully!");
+        });
+</script>
+</html>
+ {% endcomment %}
