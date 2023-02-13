@@ -1,0 +1,5 @@
+.env
+/Transcopre/.env
+Transcopre/.env
+db.sqlite3
+/db.sqlite3
