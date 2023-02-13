@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure--8fw+&xzo#3s79f5v2wk3+apekiub4exv!6=sdxb8rf%mc@rg2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://transcopefinancing.com', 'https://transcopefinancing.com.up.railway.app']
+ALLOWED_HOSTS = ['*']
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_USE_TLS = True
